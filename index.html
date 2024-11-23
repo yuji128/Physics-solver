@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Physics Solver</title>
+
+       <!--
+       <style>
+            img {
+                width: device width;
+                height: auto;
+            }
+        </style>
+    
+       --> 
+       
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div class="image-container">
+           <!--<img src="https://t3.ftcdn.net/jpg/03/91/46/10/360_F_391461057_5P0BOWl4lY442Zoo9rzEeJU0S2c1WDZR.jpg">-->
+            <div class="overlay-text">
+        <h1>Physics Solver</h1>
+        <h2>Solve Kinematics and Dynamics Questions</h2>
+        <h3>Input variables here:</h3>
+        <div style="display: flex; flex-direction: column; max-width: 150px;">
+            <div id="q1">
+                <form id="q1-form" action="">
+                    <h4>a=(v2-v1)/t</h4>
+                    <input id="q1-v2" type="number" placeholder="v2">
+                    <input id="q1-t" type="number" placeholder="t">
+                    <input id="q1-v1" type="number" placeholder="v1">
+                    <button type="submit">Calculate</button>
+                </form>
+                <div>
+                    Result
+                    <div id="q1-result"></div>
+                </div>
+            </div>
+            <form action="">
+                <h4>a=(v2-v1)/t</h4>
+                <input id="q1-v2  "type="number" placeholder="v2">
+                <input id="q1-t"type="number" placeholder="t">
+                <input id="q1-v1"type="number" placeholder="v1">
+                <button type="submit">Calculate</button>
+            </form>
+            <p>Initial Velocity</p>
+            <input id="v1"></input>
+            <p>Final Velocity</p>
+            <input id="v2"></input>
+            <p>Displacement</p>
+            <input id="d"></input>
+            <p>Time</p>
+            <input id="t"></input>
+            <p>Acceleration</p>
+            <input id="a"></input>
+        </div>  </div> </div></div>
+        <script>
+            function acceleration(v1, v2, t) {
+                
+                return (v2 - v1) / t
+            }
+            
+            let q1Form = document.getElementById("q1-form");
+
+            q1Form.addEventListener("submit", (e) => {
+            e.preventDefault();
+
+            let v1 = document.getElementById("q1-v1").value;
+            console.log(v1)
+            let v2 = document.getElementById("q1-v2").value;
+            console.log(v2)
+            let t = document.getElementById("q1-t").value;
+            console.log(t)
+
+            result =acceleration(v1, v2, t)
+            q1Result = document.getElementById("q1-result")
+            q1Result.value = result
+            }
+            );
+        </script>
+    </body>
+</html>

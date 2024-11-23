@@ -1,0 +1,20 @@
+.image-container {
+   background: repeat url('https://t3.ftcdn.net/jpg/03/91/46/10/360_F_391461057_5P0BOWl4lY442Zoo9rzEeJU0S2c1WDZR.jpg') 100% / 100%;
+   width: auto;
+ }
+.overlay-text {
+    color: white;
+    /*top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); */
+    padding: 10px 20px; 
+    font-size: 20px; 
+    text-align: center;
+}
+
+input {
+    border: 5px solid rgb(82, 164, 219);
+    padding: 5px;
+    margin: 10px;
+    border-radius: 7px;      
+}
